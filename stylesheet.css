@@ -10,12 +10,12 @@ h1 {
 }
 
 h3 {
-  margin-top: 0;
+  margin: 0;
   font-size: 20px;
 }
 
 h4 {
-  margin-top: 0;
+  margin: 0;
 }
 
 p {
@@ -74,16 +74,13 @@ li {
 }
 
 .img-underline {
+  display: block;
+  margin: 10px auto 30px;
   width: 200px;
 }
 
-/* desc-images */
-.desc-images {
-  padding-top: 30px;
-  margin: 0 auto;
-}
-
 .desc-subtitle {
+  padding-top: 30px;
   position: relative;
   display: inline-block;
   margin-bottom: 2em;
@@ -111,6 +108,8 @@ li {
 }
 
 .flex-list {
+  list-style: none;
+  padding-inline-start: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -138,12 +137,8 @@ li {
   width: 100%;
 }
 
-.damage img {
-  width: 30%;
-}
-
 @media screen and (max-width: 959px) {
-  .damage img {
+  .damage-img {
     width: 47.5%;
   }
 }
