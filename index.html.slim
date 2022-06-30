@@ -1,84 +1,60 @@
-doctype html
-html[lang="ja"]
-  head
-    meta[charset="UTF-8"]
-    meta[http-equiv="X-UA-Compatible" content="IE=edge"]
-    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
-    link[rel="stylesheet" href="stylesheet.css"]
-    title
-      | ガイドライン | アップス
-  body
-    main
-      #item-guideline
-        h3
-          | ITEM GUIDELINE
-        img.img-guideline[src="images/グループ 11@2x.png"]
-        h1.guideline-title
-          | 商品のガイドライン
-      #wrappers
-        .about-item
-          h1.about-title
-            | 中古バイクについて
-          img.img-underline[src="images/グループ 103@2x.png"]
-          .img-description
-            h3.desc-title
-              | 状態のわかる6枚の写真
-            p.desc-text
-              |  中古バイクは状態が正確にわかるよう6か所の撮影をお願いします。
-              br
-              span
-                | ・全面・後面・右面・左面・走行距離・車検証
-            .flex-list
-              .flex-item
-                img[src="images/グループ 23@2x.png"]
-                h3
-                  | 前面
-              .flex-item
-                img[src="images/グループ 25@2x.png"]
-                h3
-                  | 後面
-              .flex-item
-                img[src="images/グループ 27@2x.png"]
-                h3
-                  | 左面
-              .flex-item
-                img[src="images/グループ 29@2x.png"]
-                h3
-                  | 右面
-              .flex-item
-                img[src="images/グループ 31@2x.png"]
-                h3
-                  | 走行距離
-              .flex-item
-                img[src="images/グループ 36@2x.png"]
-                h3
-                  | 車台番号or車検表
-            p
-              | ※昭和以前の車体の場合、車体に打刻されているフレーム番号とエンジン番号のお写真もお願いします。
-          .img-description
-            h3.desc-title
-              | サビキズヘコミ、付属品の写真
-            p.desc-text
-              |  カギなどの付属品、目立つサビキズヘコミがある場合は詳細が分かるようアップの写真をお願いします。
-              br
-              |  また補足情報へも商品の状態が正確に伝わるよう記入をお願いします。 
-            #damage.flex-list
-              img[src="images/グループ 16@2x.png"]
-              img[src="images/グループ 18@2x.png"]
-        .about-item
-          h1.about-title
-            | 写真について
-          img.img-underline[src="images/グループ 103@2x.png"]
-          p
-            | 個人情報が含まれる車検証については厳重に管理させていただいております。匿名で利用できるよう名前住所はモザイク加工を行っております。
-        .about-item
-          h1.about-title
-            | 査定、販売ができない商品
-          img.img-underline[src="images/グループ 103@2x.png"]
-          ul.satei-info
-            li
-              | メーターを交換していて正確な走行距離が不明な場合
-            li
-              | 転倒により大きく破損している商品
-            li
-              | エンジンに異音異常があり、現物の確認を要する商品
+- provide :assets_css_path, "upload_assessments/contents/guideline"
+- provide :assets_js_path, "upload_assessments/contents"
+- provide :page_title, "商品のガイドライン"
+
+main
+  .item-guideline
+    h3 ITEM GUIDELINE
+    = asset_image_tag_defer "upload_assessments/contents/guideline/guideline.png", class: "img-guideline"
+    h1.guideline-title 商品のガイドライン
+  .wrappers
+    .description
+      h1.desc-title 中古バイクについて
+      = asset_image_tag_defer "upload_assessments/contents/guideline/underline.png", class: "img-underline"
+      .desc-images
+        h3.desc-subtitle 状態のわかる6枚の写真
+        p.desc-text
+          | 中古バイクは状態が正確にわかるよう6か所の撮影をお願いします。
+          br/
+          span ・全面・後面・右面・左面・走行距離・車検証
+        .flex-list
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/front.png"
+            h4 前面
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/back.png"
+            h4 後面
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/left.png"
+            h4 左面
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/right.png"
+            h4 右面
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/meter.png"
+            h4 走行距離
+          .flex-item
+            = asset_image_tag_defer "upload_assessments/contents/guideline/frame_number.png"
+            h4 車台番号or車検表
+      .desc-images
+        h3.desc-subtitle サビキズヘコミ、付属品の写真
+        p.desc-text
+          | カギなどの付属品、目立つサビキズヘコミがある場合は詳細が分かるようアップの写真をお願いします。
+          br/
+          | また補足情報へも商品の状態が正確に伝わるよう記入をお願いします。
+        .flex-list.damage
+          = asset_image_tag_defer "upload_assessments/contents/guideline/scratch1.png"
+          = asset_image_tag_defer "upload_assessments/contents/guideline/scratch2.png"
+    .description
+      h1.desc-title 写真について
+      = asset_image_tag_defer "upload_assessments/contents/guideline/underline.png", class: "img-underline"
+      p.desc-text 個人情報が含まれる車検証については厳重に管理させていただいております。匿名で利用できるよう名前住所はモザイク加工を行っております。
+    .description
+      h1.desc-title 査定、販売ができない商品
+      = asset_image_tag_defer "upload_assessments/contents/guideline/underline.png", class: "img-underline"
+      ul.satei-info
+        li メーターを交換していて正確な走行距離が不明な場合
+        li 転倒により大きく破損している商品
+        li エンジンに異音異常があり、現物の確認を要する商品
+
+= render "upload_assessments/shared/satei_start"
