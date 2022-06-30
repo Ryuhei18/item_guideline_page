@@ -55,7 +55,7 @@ li {
 .wrappers {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 767px) {
@@ -73,17 +73,16 @@ li {
   margin-bottom: 0;
 }
 
-.img-underline {
+.img-underline{
+  padding-bottom: 20px;
+}
+
+.img-underline img {
   width: 200px;
 }
 
-/* desc-images */
-.desc-images {
-  padding-top: 30px;
-  margin: 0 auto;
-}
-
 .desc-subtitle {
+  padding-top: 30px;
   position: relative;
   display: inline-block;
   margin-bottom: 2em;
@@ -130,7 +129,7 @@ li {
   width: 30%;
 }
 
-.flex-item h3 {
+.flex-item h4 {
   margin-top: 0;
 }
 
@@ -138,12 +137,8 @@ li {
   width: 100%;
 }
 
-.damage img {
-  width: 30%;
-}
-
 @media screen and (max-width: 959px) {
-  .damage img {
+  .damage-img {
     width: 47.5%;
   }
 }
